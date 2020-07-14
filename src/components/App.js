@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { handleInitialData } from "../actions/shared";
-import Dashboard from "./Dashboard";
+import Dashboard from "./NewTweet";
 import Loadingbar from "react-redux-loading";
 
 class App extends Component {

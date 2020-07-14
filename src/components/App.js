@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { handleInitialData } from "../actions/shared";
-import Dashboard from "./NewTweet";
+import Dashboard from "./TweetPage";
 import Loadingbar from "react-redux-loading";
 
 class App extends Component {
@@ -13,7 +13,15 @@ class App extends Component {
     return (
       <div>
         <Loadingbar />
-        {this.props.loading === true ? null : <Dashboard />}
+        {this.props.loading === true ? null : (
+          <Dashboard
+            match={{
+              params: {
+                id: "5c9qojr2d1738zlx09afby",
+              },
+            }}
+          />
+        )}
       </div>
     );
   }
